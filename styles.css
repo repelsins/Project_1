@@ -1,13 +1,13 @@
 /* Global Layout Set-up */
-* { 
+* {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #222;
   background: #f7f5f0;
 }
@@ -41,25 +41,29 @@ a:hover {
 }
 
 .nav .name {
-    display: block;
-    margin-right: auto;
-    color: white;
+  display: block;
+  margin-right: auto;
+  color: white;
 }
 .nav li {
   padding: 5px 10px 10px 10px;
 }
 .nav a {
-  transition: all .5s;
+  transition: all 0.5s;
 }
 .nav a:hover {
-  color: white
+  color: white;
 }
 
 header {
   text-align: center;
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 70%,rgba(255,255,255,1) 100%),
-              linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(255,255,255,0) 80%),
-              url('images/milkyway.jpg') no-repeat top center ;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 70%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 80%),
+    url("images/milkyway.jpg") no-repeat top center;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -73,11 +77,11 @@ header .profile-image {
   height: 150px;
   border-radius: 50%;
   border: 3px solid white;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 header .profile-image:hover {
   transform: translate(0, 5px);
-  border: 3px solid #17a584
+  border: 3px solid #17a584;
 }
 .tag {
   background-color: #efefef;
@@ -86,12 +90,13 @@ header .profile-image:hover {
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
+}
 .location {
   background-color: #222;
   color: #17a584;
 }
-.card {
+.card,
+.card-exp {
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
@@ -99,10 +104,23 @@ header .profile-image:hover {
   background: #fff;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
-.card:hover {
+
+.card-exp {
+  max-width: 1024px;
+}
+
+.card:hover,
+.card-exp:hover {
   border-color: #17a584;
+  transform: scale(1.01);
+}
+
+.exp-image {
+  width: 100%;
+  float: left;
+  margin-bottom: 1em;
 }
 
 ul.skills {
@@ -131,7 +149,7 @@ footer {
 
 footer .copyright {
   top: -8px;
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 footer ul {
@@ -151,8 +169,8 @@ a.social {
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
-  opacity: .4;
-  transition: all .5s;
+  opacity: 0.4;
+  transition: all 0.5s;
 }
 a.twitter {
   background-image: url(images/twitter.svg);
@@ -172,14 +190,13 @@ a.social:hover {
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
-  
   .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: flex;
+    max-width: 1200px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
   }
 
   header {
@@ -191,7 +208,6 @@ a.social:hover {
     padding: 0 30px;
   }
 
-
   main {
     padding-top: 20px;
   }
@@ -200,11 +216,15 @@ a.social:hover {
     line-height: 1.6em;
   }
 
+  .exp-image {
+    width: 40%;
+    float: left;
+    margin-right: 1em;
+  }
+
   footer {
     font-size: 1.3em;
     max-width: 1200px;
     margin: 40px auto;
   }
-
 }
-
